@@ -9,7 +9,10 @@ button.addEventListener('click', () =>{
 })
 
 function tooDark (rgb, num = 0){
-    rgb = rgb.slice(4, rgb.length-1).split(', ').forEach(x => num += parseInt(x));
+    rgb = rgb
+            .slice(4, rgb.length-1)
+            .split(', ')
+            .forEach(x => num += parseInt(x));
     return num
 }
 // tooDark('rgb(244, 54, 154)')
