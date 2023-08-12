@@ -3,7 +3,7 @@ let button = document.querySelector('button')
 
 button.addEventListener('click', () =>{
     document.body.style.background = `rgb(${randColor()}, ${randColor()}, ${randColor()})`
-    h1.innerText = `${document.body.style.background} ${tooDark(document.body.style.background)}`
+    h1.innerText = document.body.style.background
     tooDark(document.body.style.background) > 250 ? h1.style.color = 'black' : h1.style.color = 'white'
     button.innerText = `YEAYYYYYYY`
 })
