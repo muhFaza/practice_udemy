@@ -5,8 +5,8 @@ const select = form.querySelector('#select')
 
 form.addEventListener('click', function (e) {
     e.preventDefault()
-    // console.log(e);
-    // console.log(e.target.id == 'btn1');
+    
+    // what the buttons do
     if (e.target.id == 'btn1') p1.innerText = +p1.innerText + 1
     else if (e.target.id == 'btn2') p2.innerText = +p2.innerText + 1
     else if (e.target.id == 'btnr') {
@@ -17,14 +17,33 @@ form.addEventListener('click', function (e) {
         p1.style.color = ''
         p2.style.color = ''
     }
+
+    // checks if p1/p2 reached the goal
     if (p1.innerText == select.value || p2.innerText == select.value) {
         this.btn1.disabled = true
         this.btn2.disabled = true
+
+        // assign color to winner and loser
         if (p1.innerText == select.value) {
             p1.style.color = 'green'
             p2.style.color = 'red'
         }
         else if (p2.innerText == select.value) {
+            p1.style.color = 'red'
+            p2.style.color = 'green'
+        }
+    }
+
+    if (p1.innerText > select.value && p2.innerText > select.value) {
+        this.btn1.disabled = true
+        this.btn2.disabled = true
+
+        // assign color to winner and loser
+        if (p1.innerText > p2.innerText) {
+            p1.style.color = 'green'
+            p2.style.color = 'red'
+        }
+        else if (p2.innerText > p1.innerText) {
             p1.style.color = 'red'
             p2.style.color = 'green'
         }
