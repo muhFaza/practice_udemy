@@ -19,38 +19,25 @@ form.addEventListener('click', function (e) {
     }
 
     // checks if p1/p2 reached the goal
-    if (+p1.innerText == select.value || +p2.innerText == select.value) {
+    if (+p1.innerText >= select.value || +p2.innerText >= select.value) {
         this.btn1.disabled = true
         this.btn2.disabled = true
 
-        // assign color to winner and loser
-        if (+p1.innerText == select.value) {
+        // assign color to winner, loser or draw
+        if (+p1.innerText == +p2.innerText){
+            p1.style.color = 'grey'
+            p2.style.color = 'grey'
+        }
+        else if (+p1.innerText > +p2.innerText) {
             p1.style.color = 'green'
             p2.style.color = 'red'
         }
-        else if (+p2.innerText == select.value) {
+        else {
             p1.style.color = 'red'
             p2.style.color = 'green'
         }
+
         console.log('first check');
     }
-
-    // user bug prevention
-    // condition in-case user changed #select to lower value
-    // when the score is already above the new selected value
-    if (+p1.innerText > +select.value && +p2.innerText > +select.value) {
-        this.btn1.disabled = true
-        this.btn2.disabled = true
-
-        // assign color to winner and loser
-        if (+p1.innerText > +p2.innerText) {
-            p1.style.color = 'green'
-            p2.style.color = 'red'
-        }
-        else if (+p2.innerText > +p1.innerText) {
-            p1.style.color = 'red'
-            p2.style.color = 'green'
-        }
-        console.log('second check');
-    }
 })
+

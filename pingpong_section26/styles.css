@@ -3,6 +3,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-family: arial;
+}
+
 #div1 {
     display: flex;
     justify-content: center;
@@ -13,4 +17,32 @@ body {
     width: 300px;
     box-shadow: 1px 1px 5px;
     border-radius: 3px;
+}
+
+#btn1 {
+    background-color: #00e6bf;
+}
+#btn1:hover {
+    background-color: #00ceab;
+}
+
+#btn2 {
+    background-color: #00abdf;
+}
+#btn2:hover {
+    background-color: #0098c7;
+}
+
+#btnr {
+    background-color: #EE3D5E;
+}
+#btnr:hover {
+    background-color: rgb(199, 51, 78);
+}
+
+.btn {
+    border: 0px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 2px;
 }
