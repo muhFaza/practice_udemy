@@ -1,0 +1,16 @@
+body {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#div1 {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+}
+#pongImg {
+    width: 300px;
+    box-shadow: 1px 1px 5px;
+    border-radius: 3px;
+}
